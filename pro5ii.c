@@ -1,8 +1,8 @@
-// wrtie a c program to merge and display two unsorted arrays //
+//write a c program to merge and display two sorted arrays //
 #include <stdio.h>
 
 int main() {
-    int size1, size2, i, j;
+    int size1, size2, i, j, k;
     printf("Enter the size of the first array: ");
     scanf("%d", &size1);
     printf("Enter the size of the second array: ");
@@ -20,11 +20,30 @@ int main() {
     }
 
     // Merge the arrays
-    for (i = 0; i < size1; i++) {
-        merged[i] = arr1[i];
+    i = 0;
+    j = 0;
+    k = 0;
+    while (i < size1 && j < size2) {
+        if (arr1[i] < arr2[j]) {
+            merged[k] = arr1[i];
+            i++;
+        } else {
+            merged[k] = arr2[j];
+            j++;
+        }
+        k++;
     }
-    for (i = 0; i < size2; i++) {
-        merged[size1 + i] = arr2[i];
+
+    // Copy any remaining elements
+    while (i < size1) {
+        merged[k] = arr1[i];
+        i++;
+        k++;
+    }
+    while (j < size2) {
+        merged[k] = arr2[j];
+        j++;
+        k++;
     }
 
     // Display the merged array
