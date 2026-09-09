@@ -1,4 +1,4 @@
-//! write a program in c to prefer creation , modify, delete and display  operations in a single linked Clist//
+//! write a program in c to prefer creation , modify, delete and display  operations in a single linked list//
 
 #include <stdio.h>
 #include <stdlib.h>
