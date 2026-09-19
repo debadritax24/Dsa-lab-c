@@ -78,6 +78,7 @@ int main() {
     printf("\nEnter data to insert at the first position: ");
     scanf("%d", &firstData);
 
+
     // Insert at beginning
     head = insertAtFirst(head, firstData);
 
