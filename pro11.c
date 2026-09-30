@@ -132,7 +132,7 @@ void freeList(struct Node* head) {
     struct Node* nextNode;
     struct Node* last = head;
 
-    while (last->next != head) {
+    while (last->next != head) { 
         last = last->next;
     }
     last->next = NULL;
@@ -147,7 +147,7 @@ void freeList(struct Node* head) {
 int main() {
     struct Node* head = NULL;
     int choice, val, oldVal, newVal, n, i;
-
+     
     while (1) {
         printf("\n--- Circular Linked List Operations ---\n");
         printf("1. Create / Insert Node\n");
